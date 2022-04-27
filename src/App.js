@@ -1,17 +1,17 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import About from './components/About';
+// import About from './components/About';
 import { useState } from 'react';
 import Alert from './components/Alert';
 
-import React from "react";
-import {
-  BrowserRouter,
-  Routes, // instead of "Switch"
-  Route,
-} from "react-router-dom";
+// import React from "react";
+// import {
+//   BrowserRouter,
+//   Routes, // instead of "Switch"
+//   Route,
+// } from "react-router-dom";
 
 // let name="Kamil"
 
@@ -50,20 +50,24 @@ function App() {
   return (
     <>
 
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
 
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
 
         <Alert alert={alert} />
 
         <div className="container my-3" >
-          <Routes>
+          {/* <Routes>
             <Route exact path="/about" element={<About />} />
-            <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyse below" mode={mode} />} />
-          </Routes>
+             */}
+            {/* <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyse below" mode={mode} />} /> */}
+
+            <TextForm showAlert={showAlert} heading="Enter the text to analyse below" mode={mode} />
+
+          {/* </Routes> */}
         </div>
 
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
 
 
 
